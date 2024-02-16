@@ -1,0 +1,141 @@
+
+:root
+{
+    --amazon-color: rgb(254,189,105);
+    --bg-color: rgb(250,250,250)
+}
+body
+{
+    margin:0;
+    padding:0;
+    font-family: 'Protest Riot', sans-serif;
+    width: 100%;
+    height: 100vh;
+    margin-top:65px;
+}
+nav
+{
+    margin:0;
+    padding:0;
+}
+.nav-bar
+{
+    top:0;
+    left:0;
+    right:0;
+    position:fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--bg-color);
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color:rgb(5, 0, 0);
+    column-gap: 10px;
+    padding: 0px 5px;
+}
+.search img
+{
+    align-items: center;
+    width: 15px;
+    object-fit: contain;
+}
+.mobile-logo
+{
+    display: none;
+}
+.search
+{
+    display: flex;
+    flex:1;
+    justify-content: center;
+}
+.search input{
+    max-width: 800px;
+    min-width: 100px;
+    width:100%;
+    height: 40px;
+    border-radius: 5px;
+    border:none;
+    transition: 1s;
+    font-family: 'Protest Riot', sans-serif;
+    font-size: medium;
+}
+.search input::placeholder
+{
+    font-family: 'Protest Riot', sans-serif;
+    font-size: medium;
+}
+.search input:focus,.search input:hover
+{
+    box-sizing: border-box;
+    outline:none;
+    border: solid 2px var(--amazon-color);
+}
+.search button
+{
+    margin-left: -5px;
+    border:solid var(--amazon-color) 1px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: var(--amazon-color);
+    width: 30px;
+
+}
+.logo
+{
+width:100px
+}
+.carts
+{
+    width:200px;
+    display: flex;
+    column-gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.carts img{
+    object-fit: contain;
+    width:60px;
+}
+.Cart-nav
+{
+    display: flex;
+    position: relative;
+    margin: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.returns:hover,.Cart-nav:hover,.logo:hover
+{
+    border: solid white 2px;
+}
+.cart-quantity {
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    left: 33px;
+    font-size: 21px;
+    color: var(--amazon-color);
+}
+@media screen and (max-width:575px)
+{
+.logo
+{
+    display: none;
+}
+.mobile-logo
+{
+    display: inline-block;
+    width:50px;
+    object-fit: contain;
+}
+}
+a
+{
+}
+.returns,.Cart-nav,.logo
+{
+    padding: 10px;
+}
